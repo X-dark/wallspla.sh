@@ -1,0 +1,28 @@
+conky.config = {
+    background = false,
+    use_xft = true,
+    font = 'erus:size=10',
+    update_interval = 20,
+    total_run_times = 0,
+    own_window = true,
+    own_window_type = 'desktop',
+    own_window_argb_visual = true,
+    own_window_argb_value = 80,
+    own_window_hints = 'undecorated,sticky,skip_taskbar,skip_pager',
+    double_buffer = true,
+    draw_shades = true,
+    draw_outline = false,
+    draw_borders = false,
+    default_color = "808080",
+    default_shade_color = "101319",
+    alignment = 'top_left',
+    gap_x = 1450,
+    gap_y = 1050,
+    uppercase = false,
+    override_utf8_locale = true,
+};
+
+conky.text = [[
+${color ffffff}${head ~/Images/wallpaper.txt 1}
+]];
+-- vim:set ft=lua:
