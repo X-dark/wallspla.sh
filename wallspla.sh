@@ -2,16 +2,16 @@
 set -euo pipefail
 
 #Unsplash API access key: https://unsplash.com/oauth/applications
-ACCESS_KEY=""
+: ${ACCESS_KEY:=""}
 
 #Comma separated collection ids: https://unsplash.com/collections
-COLLECTIONS=""
+: ${COLLECTIONS:=""}
 
 #Name of the jpg file to use
-WALLPAPER_LOCATION=~/Images/wallpaper.jpg
+: ${WALLPAPER_LOCATION:=~/Images/wallpaper.jpg}
 
 #Name of the info (txt) file
-INFO_LOCATION=~/Images/wallpaper.txt
+: ${INFO_LOCATION:=~/Images/wallpaper.txt}
 
 #Get new random info
 photo=$(curl -sf -H "Accept-Version: v1" -H "Authorization: Client-ID ${ACCESS_KEY}" "https://api.unsplash.com/photos/random?featured&orientation=landscape&collections=${COLLECTIONS}&random=${RANDOM}")
