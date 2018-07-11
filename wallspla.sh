@@ -26,6 +26,10 @@ curl -Lsf -o ${WALLPAPER_LOCATION} ${photo_url}
 nitrogen --save --set-zoom ${WALLPAPER_LOCATION}
 
 #Put wallpaper info into text file (eg for Conky)
-echo "Taken in ${photo_location} by ${photo_username}" > ${INFO_LOCATION}
+if [[ "${photo_location}" == null ]] ; then
+  echo "Photo by ${photo_username}" > ${INFO_LOCATION}
+else
+  echo "Taken in ${photo_location} by ${photo_username}" > ${INFO_LOCATION}
+fi
 
 # vim:set ts=2 sw=2 et:
